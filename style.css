@@ -6,17 +6,20 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #f9f9f9; /* Light soft background */
+    overflow-x: hidden;
 }
 
+/* Header & Navbar */
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background: #0066cc;
+    background: #2196F3; /* Soft Blue */
     color: white;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -29,8 +32,8 @@ header {
     padding: 15px 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
+.logo h1 {
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -46,100 +49,171 @@ header {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffcc00;
+    color: #ff5722; /* Orange on hover */
 }
 
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0; /* Reduced gap between picture and About */
+    background: #ffffff;
+    margin-top: 60px;
 }
 
-.burger div {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 4px;
-    transition: all 0.3s ease;
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Section Styles */
+/* Section Styling */
 .section {
-    padding: 100px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: #f4f4f4;
-    margin-top: 70px;
-}
-
-.section:nth-child(even) {
     background: #fff;
+    margin-top: 80px; /* To prevent content from being hidden under fixed navbar */
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.about {
+    background-color: #e1f5fe; /* Light Blue */
+}
+
+.skills {
+    background-color: #e3f2fd; /* Light blue */
+}
+
+.projects {
+    background-color: #f1f8e9; /* Soft Green */
+}
+
+.contact {
+    background-color: #fbe9e7; /* Soft Pink */
 }
 
 h2 {
+    color: #2196F3;
     font-size: 2rem;
     margin-bottom: 20px;
-    border-bottom: 3px solid #0066cc;
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
+/* Skill Bars */
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Profile Picture */
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 20px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.skill {
+    text-align: left;
+}
+
+.skill p {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.progress {
+    background: #e4e4e4;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4caf50;
+}
+
+/* Project Cards */
+.project-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    color: #2196F3;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+}
+
+/* Contact Section */
+.contact a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background: #0066cc;
+    background: #2196F3;
     color: white;
+    padding: 15px;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
-/* Responsive Design */
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+    }
+
+    .project-cards {
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-card {
         width: 100%;
-        background: #0066cc;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .burger {
-        display: flex;
     }
 }
