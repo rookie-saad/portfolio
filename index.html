@@ -3,71 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Md Saad Bin Naeem</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio of Md Saad Bin Naeem">
+    <title>Md Saad Bin Naeem - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="logo">Md Saad Bin Naeem</div>
+            <div class="logo">
+                <h1>Md Saad Bin Naeem</h1>
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </nav>
     </header>
 
-    <section id="about" class="section">
+    <!-- Profile Picture -->
+    <section class="profile">
+        <div class="container">
+            <img src="https://raw.githubusercontent.com/rookie-saad/portfolio/refs/heads/main/profile.jpg" alt="Md Saad Bin Naeem" class="profile-pic">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
         <div class="container">
             <h2>About Me</h2>
-            <img src="https://raw.githubusercontent.com/rookie-saad/portfolio/refs/heads/main/profile.jpg" alt="Md Saad Bin Naeem" class="profile-pic">
-            <p>Hello! I'm Md Saad Bin Naeem, a passionate student at BUBT pursuing a BSc in CSE. I love exploring new technologies and improving my skills in computer science.</p>
+            <p>👋 Hi, I'm Md Saad Bin Naeem <br><br>
+                A student pursuing a BSc in Computer Science and Engineering at Bangladesh University of Business and Technology (BUBT).<br>
+                I am passionate about learning new technologies and building software solutions.</p>
+            <p>💻 My goal is to work with cutting-edge technologies and create impactful software that makes a difference in the world. I am constantly learning and looking to grow in the tech industry.</p>
         </div>
     </section>
 
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            <p><strong>Bangladesh University of Business and Technology (BUBT)</strong></p>
-            <p>Program: BSc Engineer in CSE</p>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
         <div class="container">
             <h2>Skills</h2>
-            <ul>
-                <li>Basic Computer Knowledge</li>
-                <li>C Language</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
+            <div class="skill-bars">
+                <div class="skill">
+                    <p>💻 Basic Computer Knowledge</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>💡 C Language</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>🌐 HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>🎨 CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>📜 JavaScript</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>Portfolio Website 📱</h3>
+                    <p>A personal portfolio website that showcases your skills, education, and projects. Built with HTML, CSS, and JavaScript, this website includes an animated navbar, smooth scrolling effects, and responsive design.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Manager Web App 📝</h3>
+                    <p>A web app to manage tasks. Built with JavaScript, HTML, and CSS, it allows users to add, delete, and mark tasks as completed. It uses local storage to persist data across sessions.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Weather App ☀️</h3>
+                    <p>A weather forecasting app that fetches real-time weather data based on the user's location or a city search. Built using HTML, CSS, JavaScript, and an external weather API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email:<a href="mailto: md.saadbinnaeem@gmail.com "> md.saadbinnaeem@gmail.com </a></p>
-            <p>What's App: <a href="tel:+8801976913507">+8801976913507</a> </p>
-             <p>Linkedin: <a href="https://www.linkedin.com/in/md-saad-bin-naeem-5b46b5336/">Md Saad Bin Naeem</a></p>
-              <p>GitHub: <a href="https://github.com/rookie-saad">Md Saad Bin Naeem</a></p>
-               <p>Facebook: <a href="https://www.facebook.com/md.saad.004">Md Saad Bin Naeem</a></p>
+            <p>📧 Email: <a href="mailto:md.saadbinnaeem@gmail.com">md.saadbinnaeem@gmail.com</a></p>
+            <p>📱 WhatsApp: <a href="tel:+8801976913507">+8801976913507</a></p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/md-saad-bin-naeem-5b46b5336/">Md Saad Bin Naeem</a></p>
+            <p>💻 GitHub: <a href="https://github.com/rookie-saad">Md Saad Bin Naeem</a></p>
+            <p>📘 Facebook: <a href="https://www.facebook.com/md.saad.004">Md Saad Bin Naeem</a></p>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Md Saad Bin Naeem</p>
-        </div>
+        <p>© 2024 Md Saad Bin Naeem | All Rights Reserved</p>
     </footer>
 
     <script src="script.js"></script>
