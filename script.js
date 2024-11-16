@@ -1,7 +1,15 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.section');
+    
+    function checkSections() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+                section.style.opacity = '1';
+            }
+        });
+    }
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('toggle');
+    window.addEventListener('scroll', checkSections);
+    checkSections();
 });
