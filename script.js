@@ -3,6 +3,7 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
+        // Scroll to the section referenced in the href attribute
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -17,6 +18,7 @@ function fadeInOnScroll() {
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
 
+        // Trigger fade-in animation when section is near the viewport
         if (sectionTop < windowHeight * 0.8) {
             section.style.animation = 'fadeIn 1s ease forwards';
         }
@@ -25,7 +27,7 @@ function fadeInOnScroll() {
 
 window.addEventListener('scroll', fadeInOnScroll);
 
-// Initial Scroll Trigger
+// Initial Scroll Trigger for Sections
 fadeInOnScroll();
 
 // Optional: Adding a Scroll-to-Top Button
