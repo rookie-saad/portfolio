@@ -102,6 +102,16 @@ ul li {
     font-size: 1.2rem;
     margin: 10px 0;
 }
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Footer */
 footer {
