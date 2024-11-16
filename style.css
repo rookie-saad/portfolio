@@ -5,56 +5,51 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background: #f0f4f8; /* Soft light background */
     color: #333;
-    background: #f9f9f9; /* Light soft background */
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Header & Navbar */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #2196F3; /* Soft Blue */
-    color: white;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    background: #2196F3; /* Professional blue */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-.logo h1 {
+.navbar .logo h1 {
+    color: white;
     font-size: 1.8rem;
-    font-weight: bold;
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff5722; /* Orange on hover */
+    text-decoration: underline;
 }
 
 /* Profile Section */
@@ -64,7 +59,7 @@ header {
     align-items: center;
     padding: 40px 0; /* Reduced gap between picture and About */
     background: #ffffff;
-    margin-top: 60px;
+    margin-top: 100px; /* Adjust this to fine-tune the space above */
 }
 
 .profile-pic {
@@ -73,71 +68,52 @@ header {
     height: 150px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px; /* Adjust this if you want more space below the picture */
 }
 
-/* Section Styling */
+/* Section Style */
 .section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     text-align: center;
-    background: #fff;
-    margin-top: 80px; /* To prevent content from being hidden under fixed navbar */
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.about {
-    background-color: #e1f5fe; /* Light Blue */
-}
-
-.skills {
-    background-color: #e3f2fd; /* Light blue */
-}
-
-.projects {
-    background-color: #f1f8e9; /* Soft Green */
-}
-
-.contact {
-    background-color: #fbe9e7; /* Soft Pink */
 }
 
 h2 {
-    color: #2196F3;
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #333;
 }
 
-p {
+/* About Section */
+.about p {
     font-size: 1.1rem;
+    color: #555;
     margin-bottom: 15px;
 }
 
 /* Skill Bars */
 .skill-bars {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .skill {
+    width: 250px;
     text-align: left;
 }
 
-.skill p {
-    font-weight: bold;
-    color: #2196F3;
-}
-
 .progress {
-    background: #e4e4e4;
+    height: 10px;
+    background: #ddd;
     border-radius: 5px;
-    overflow: hidden;
-    height: 20px;
+    margin-top: 5px;
 }
 
 .progress-bar {
     height: 100%;
     background: #4caf50;
+    border-radius: 5px;
 }
 
 /* Project Cards */
@@ -146,6 +122,7 @@ p {
     justify-content: space-around;
     gap: 30px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .project-card {
@@ -183,6 +160,26 @@ p {
 .contact a:hover {
     text-decoration: underline;
 }
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden initially */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background: #1976D2;
+}
+
 
 /* Footer */
 footer {
