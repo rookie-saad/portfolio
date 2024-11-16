@@ -1,2 +1,3 @@
 # portfolio
-normal portfolio using chatgpt(html, css, javasript)
+normal portfolio using html, css, javasript.
+
